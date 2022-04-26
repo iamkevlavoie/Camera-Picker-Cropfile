@@ -1,0 +1,7 @@
+{
+  "name": "camerapickercropfile",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
