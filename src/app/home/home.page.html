@@ -1,20 +1,24 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+     CameraCrop
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  <ion-button (click)="takeaPicture()">
+    Take a picture
+    </ion-button>
+    <img [src]="capturedSnapURL" />
+
+    <ion-button (click)="chooseImage()">
+      Choose the image you would like to crop
+      </ion-button>
+      <img [src]="croppedpicturepath" />
+
+      <h2 *ngIf="croppedpicturepath.length">Cropped Image</h2>
+      <p *ngIf="loaded">Processing ...</p>
+
 </ion-content>
